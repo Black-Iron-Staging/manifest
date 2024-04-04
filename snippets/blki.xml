@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest>
+
+  <remote  name="blki"
+           fetch="https://github.com/"
+           sync-c="true"
+           sync-j="4"
+           revision="refs/heads/u14" />
+
+  <remote  name="blki-gitlab"
+           fetch="https://gitlab.com/"
+           sync-c="true"
+           sync-j="4"
+           revision="refs/heads/u14" />
+
+  <remote  name="blki_staging"
+           fetch="https://github.com/"
+           sync-c="true"
+           sync-j="4"
+           revision="refs/heads/u14" />
+
+  <remote  name="yaap"
+           fetch="https://github.com/"
+           sync-c="true"
+           sync-j="4"
+           revision="refs/heads/fourteen" />
+
+  <!-- BlackIron additions -->
+  <project path="manifest" name="Black-Iron-Staging/manifest" remote="blki_staging" />
+
+  <!-- Hardware repos -->
+  <project path="hardware/interfaces" name="Black-Iron-Project/hardware_interfaces" groups="pdk" remote="blki" revision="u14_qpr2" />
+  <project path="hardware/qcom-caf/common" name="Black-Iron-Project/hardware_qcom-caf_common" groups="qcom" remote="blki" />
+
+  <!-- Frameworks -->
+  <project path="frameworks/libs/systemui" name="yaap/frameworks_libs_systemui" remote="yaap" />
+  <project path="frameworks/opt/telephony" name="yaap/frameworks_opt_telephony" groups="pdk" remote="yaap" />
+  <project path="frameworks/opt/net/ims" name="yaap/frameworks_opt_net_ims" groups="frameworks_ims,pdk-cw-fs,pdk-fs" remote="yaap" />
+
+  <!-- Packages -->
+  <project path="packages/apps/PhoneCommon" name="yaap/packages_apps_PhoneCommon" groups="pdk-cw-fs,pdk-fs" remote="yaap" />
+  <project path="packages/providers/TelephonyProvider" name="yaap/packages_providers_TelephonyProvider" groups="pdk-cw-fs,pdk-fs" remote="yaap" />
+  <project path="packages/services/Telephony" name="yaap/packages_services_Telephony" groups="pdk-cw-fs,pdk-fs" remote="yaap" />
+
+  <!-- System -->
+  <project path="system/libsysprop" name="yaap/system_libsysprop" groups="pdk" remote="yaap" />
+
+
+
+</manifest>
