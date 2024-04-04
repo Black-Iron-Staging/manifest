@@ -28,6 +28,15 @@
   <!-- BlackIron additions -->
   <project path="manifest" name="Black-Iron-Staging/manifest" remote="blki_staging" />
 
+  <project path="build/make" name="Black-Iron-Staging/build" groups="pdk,sysui-studio" remote="blki_staging" >
+    <linkfile dest="build/CleanSpec.mk" src="CleanSpec.mk" />
+    <linkfile dest="build/buildspec.mk.default" src="buildspec.mk.default" />
+    <linkfile dest="build/core" src="core" />
+    <linkfile dest="build/envsetup.sh" src="envsetup.sh" />
+    <linkfile dest="build/target" src="target" />
+    <linkfile dest="build/tools" src="tools" />
+  </project>
+
   <!-- Hardware repos -->
   <project path="hardware/interfaces" name="Black-Iron-Project/hardware_interfaces" groups="pdk" remote="blki" revision="u14_qpr2" />
   <project path="hardware/qcom-caf/common" name="Black-Iron-Project/hardware_qcom-caf_common" groups="qcom" remote="blki" />
