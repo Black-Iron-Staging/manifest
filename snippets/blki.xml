@@ -39,7 +39,7 @@
 
   <!-- Hardware repos -->
   <project path="hardware/interfaces" name="Black-Iron-Project/hardware_interfaces" groups="pdk" remote="blki" revision="u14_qpr2" />
-  <project path="hardware/qcom-caf/common" name="Black-Iron-Project/hardware_qcom-caf_common" groups="qcom" remote="blki" />
+<!--  <project path="hardware/qcom-caf/common" name="Black-Iron-Project/hardware_qcom-caf_common" groups="qcom" remote="blki" /> -->
 
   <!-- Frameworks -->
   <project path="frameworks/libs/systemui" name="yaap/frameworks_libs_systemui" remote="yaap" />
