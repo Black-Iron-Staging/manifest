@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest>
+
+  <remote  name="blki"
+           fetch="https://github.com/"
+           sync-c="true"
+           sync-j="4"
+           revision="refs/heads/u14_QPR2" />
+
+  <!-- BLKI additions -->
+  <project path="manifest" name="Black-Iron-Staging/manifest" remote="blki" />
+
+  <project path="art" name="Black-Iron-Project/art" groups="pdk" remote="blki" />
+
+  <project path="bionic" name="Black-Iron-Project/bionic" groups="pdk" remote="blki" />
+
+  <project path="bootable/recovery" name="Black-Iron-Project/bootable_recovery" groups="pdk" remote="blki" />
+
+  <project path="build/make" name="Black-Iron-Project/build" groups="pdk,sysui-studio" remote="blki" >
+    <linkfile dest="build/CleanSpec.mk" src="CleanSpec.mk" />
+    <linkfile dest="build/buildspec.mk.default" src="buildspec.mk.default" />
+    <linkfile dest="build/core" src="core" />
+    <linkfile dest="build/envsetup.sh" src="envsetup.sh" />
+    <linkfile dest="build/target" src="target" />
+    <linkfile dest="build/tools" src="tools" />
+  </project>
+
+  <project path="build/soong" name="Black-Iron-Project/build_soong" groups="pdk,tradefed" remote="blki" >
+    <linkfile dest="Android.bp" src="root.bp" />
+    <linkfile dest="bootstrap.bash" src="bootstrap.bash" />
+  </project>
+
+  <project path="device/lineage/sepolicy" name="Black-Iron-Project/device_blackiron_sepolicy" remote="blki" />
+
+  <project path="frameworks/av" name="Black-Iron-Project/frameworks_av" groups="pdk" remote="blki" />
+  <project path="frameworks/base" name="Black-Iron-Staging/frameworks_base" groups="pdk-cw-fs,pdk-fs,sysui-studio" remote="blki" />
+  <project path="frameworks/libs/systemui" name="Black-Iron-Project/frameworks_libs_systemui" groups="pdk-cw-fs,pdk-fs,sysui-studio" remote="blki" />
+  <project path="frameworks/native" name="Black-Iron-Project/frameworks_native" groups="pdk" remote="blki" />
+  <project path="frameworks/opt/telephony" name="Black-Iron-Project/frameworks_opt_telephony" groups="pdk" remote="blki" />
+
+</manifest>
